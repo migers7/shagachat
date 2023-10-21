@@ -1,0 +1,11 @@
+import 'controller/privacy_policy_controller.dart';import 'package:flutter/material.dart';import 'package:shaga_chat/core/app_export.dart';import 'package:shaga_chat/widgets/app_bar/appbar_image.dart';import 'package:shaga_chat/widgets/app_bar/appbar_subtitle.dart';import 'package:shaga_chat/widgets/app_bar/custom_app_bar.dart';class PrivacyPolicyScreen extends GetWidget<PrivacyPolicyController> {const PrivacyPolicyScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(appBar: CustomAppBar(leadingWidth: 52.h, leading: AppbarImage(svgPath: ImageConstant.imgArrowleftGray90003, margin: EdgeInsets.only(left: 24.h, top: 10.v, bottom: 13.v), onTap: () {onTapArrowleftone();}), title: AppbarSubtitle(text: "lbl_privacy_policy".tr, margin: EdgeInsets.only(left: 16.h))), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 19.v), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [SizedBox(height: 3.v), Text("msg_1_types_of_data".tr, style: theme.textTheme.titleLarge), Container(width: 370.h, margin: EdgeInsets.only(top: 25.v, right: 9.h), child: Text("msg_lorem_ipsum_dolor".tr, maxLines: 8, overflow: TextOverflow.ellipsis, style: CustomTextStyles.bodyMediumGray800_1.copyWith(height: 1.40))), SizedBox(height: 21.v), Text("msg_2_use_of_your_personal".tr, style: theme.textTheme.titleLarge), SizedBox(height: 37.v), SizedBox(width: 380.h, child: Text("msg_magna_etiam_tempor".tr, maxLines: 9, overflow: TextOverflow.ellipsis, style: CustomTextStyles.bodyMediumGray800_1.copyWith(height: 1.40))), SizedBox(height: 32.v), Text("msg_3_disclosure_of".tr, style: theme.textTheme.titleLarge), Container(width: 370.h, margin: EdgeInsets.only(top: 27.v, right: 9.h), child: Text("msg_consequat_id_porta".tr, maxLines: 12, overflow: TextOverflow.ellipsis, style: CustomTextStyles.bodyMediumGray800_1.copyWith(height: 1.40)))])))); } 
+
+
+/// Navigates to the previous screen.
+///
+/// When the action is triggered, this function uses the [Get] package to 
+/// navigate to the previous screen in the navigation stack.
+onTapArrowleftone() { Get.back(); } 
+ }
